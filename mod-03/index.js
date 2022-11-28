@@ -41,7 +41,7 @@ app.post('/create', (request, response) => {
 // método PUT
 app.put('/edit/:id', (request, response) => {
     // seta o id como parâmetro
-    const { id } = request.params
+    const { id } = request.params;
 
     // reconhecendo o item
     const update = data.find(
@@ -76,6 +76,5 @@ app.delete('/delete/:id', (request, response) => {
 
     return response.status(200).json(data)
 })
-
 // executar o servidor na porta 8080
-app.listen(Number(process.env.PORT), () => console.log('server on port 8080!'))
+app.listen(Number(process.env.PORT), () => console.log(`server on port ${ process.env.PORT }!`))
